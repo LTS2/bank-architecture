@@ -19,8 +19,8 @@ public class UserEntity extends BaseEntity {
 
 	/** 이름 */
 	String name;
-	/** 나이 */
-	String age;
+	/** 생년월일 */
+	String birthDate;
 	/** 직업 */
 	String job;
 }

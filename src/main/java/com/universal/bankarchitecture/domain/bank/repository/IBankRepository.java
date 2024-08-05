@@ -13,4 +13,5 @@ import com.universal.bankarchitecture.domain.bank.entity.BankEntity;
 @Repository
 public interface IBankRepository extends JpaRepository<BankEntity, Long> {
 	// hibernate vs Spring Data JPA
+
 }

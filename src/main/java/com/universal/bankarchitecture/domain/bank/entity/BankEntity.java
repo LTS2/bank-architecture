@@ -22,6 +22,7 @@ import lombok.Setter;
 public class BankEntity extends BaseEntity {
 
 	private String bankName; // 은행 이름
+	// private
 
 	@ManyToOne
 	@JoinColumn(name = "USER_ID")

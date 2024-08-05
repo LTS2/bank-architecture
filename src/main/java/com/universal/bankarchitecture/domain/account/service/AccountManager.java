@@ -1,4 +1,4 @@
-package com.universal.bankarchitecture.domain.account;
+package com.universal.bankarchitecture.domain.account.service;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,6 +22,8 @@ public abstract class AccountManager {
 	 * @param amount 입금할 금액
 	 */
 	protected void deposit(int userId, int accountNumber, int bankId, double amount) {
+		// 0. 올바른 계좌인지 확인.
+
 		// 1. userId의 accountNumber에 출금하는 금액이 계좌 잔액보다 많을 경우 - 메서드로 빼기 유효성 검사.
 		if (!hasMoney(userId, amount)) {
 			return;
@@ -46,9 +48,11 @@ public abstract class AccountManager {
 	 * 주어진 사용자 ID에 대해 계좌가 존재하는지 확인합니다.
 	 *
 	 * @param userId 계좌 보유 여부를 확인할 사용자의 ID
+	 * @param accountNumber 계좌 보유 여부를 확인할 사용자의 계좌번호
 	 * @return 계좌가 있을 경우 {@code true}, 없을 경우 {@code false}
 	 */
-	boolean isAccount(int userId) {
+	boolean isAccount(int userId, int accountNumber) {
+
 		return true;
 	}
 
@@ -85,4 +89,5 @@ public abstract class AccountManager {
 		// 1. 각 은행별 계좌 번호 생성 로직
 		return 1;
 	}
+
 }
